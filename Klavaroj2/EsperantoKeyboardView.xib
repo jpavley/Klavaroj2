@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EsperantoKeyboardView" customModule="Klavaroj" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-BV-hRo" userLabel="Main Stack View">
+                    <rect key="frame" x="2" y="2" width="371" height="253"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Preview Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-0b-XiH">
+                            <rect key="frame" x="0.0" y="0.0" width="371" height="45"/>
+                            <color key="backgroundColor" red="0.76862745098039209" green="0.78431372549019607" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="yfv-Cb-F0c"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-J6-ZMQ" userLabel="First Row Stack View">
+                            <rect key="frame" x="0.0" y="52" width="371" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-vw-lPM" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="bzr-Tb-KaD"/>
+                                        <constraint firstAttribute="width" constant="30" id="efM-1g-mrH"/>
+                                    </constraints>
+                                    <state key="normal" title="Q">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-eZ-6SZ" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="38" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="KRV-yF-yD4"/>
+                                        <constraint firstAttribute="height" constant="45" id="sfk-lI-ZD4"/>
+                                    </constraints>
+                                    <state key="normal" title="W">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-Ls-ly0" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="76" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="7TJ-ZX-Wnb"/>
+                                        <constraint firstAttribute="height" constant="45" id="dJg-VO-iyD"/>
+                                    </constraints>
+                                    <state key="normal" title="E">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-vo-Bpe" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="113.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="i2g-1o-rzM"/>
+                                        <constraint firstAttribute="width" constant="30" id="mWF-Zi-Fbd"/>
+                                    </constraints>
+                                    <state key="normal" title="R">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="151.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="LJg-7w-khl"/>
+                                        <constraint firstAttribute="height" constant="45" id="mDt-0c-Aw3"/>
+                                    </constraints>
+                                    <state key="normal" title="T">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBH-ng-o1n" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="189.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="9Rv-61-yqH"/>
+                                        <constraint firstAttribute="height" constant="45" id="WkQ-mY-gkm"/>
+                                    </constraints>
+                                    <state key="normal" title="Y">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCB-d6-ml1" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="227.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Bel-ij-jRI"/>
+                                        <constraint firstAttribute="height" constant="45" id="wbN-UW-2ye"/>
+                                    </constraints>
+                                    <state key="normal" title="U">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-AP-u1L" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="265" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="JzO-ie-xtM"/>
+                                        <constraint firstAttribute="width" constant="30" id="gLh-gB-eCt"/>
+                                    </constraints>
+                                    <state key="normal" title="I">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-AX-Vha" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="303" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Q7h-hy-YSQ"/>
+                                        <constraint firstAttribute="width" constant="30" id="f0u-UU-7Jj"/>
+                                    </constraints>
+                                    <state key="normal" title="O">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41T-mT-dev" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="341" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="mae-nN-Tar"/>
+                                        <constraint firstAttribute="height" constant="45" id="ovK-vg-Roo"/>
+                                    </constraints>
+                                    <state key="normal" title="P">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-7q-Tma" userLabel="Second Row Stack View">
+                            <rect key="frame" x="0.0" y="104" width="371" height="45"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFT-7f-hhO">
+                                    <rect key="frame" x="0.0" y="0.0" width="15" height="45"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="15" id="Lbd-6K-LLj"/>
+                                        <constraint firstAttribute="height" constant="45" id="oQq-7x-mct"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-P7-oa0" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="22" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Oow-vZ-1Vp"/>
+                                        <constraint firstAttribute="width" constant="30" id="eHf-Wd-bfe"/>
+                                    </constraints>
+                                    <state key="normal" title="A">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-Kt-Mm7" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="59" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="fan-50-puS"/>
+                                        <constraint firstAttribute="width" constant="30" id="nKf-TN-fJG"/>
+                                    </constraints>
+                                    <state key="normal" title="S">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-AW-tN3" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="96.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Cui-ye-riv"/>
+                                        <constraint firstAttribute="height" constant="45" id="LXC-GY-C3w"/>
+                                    </constraints>
+                                    <state key="normal" title="D">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-tQ-jRl" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="133.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="FJv-WY-6il"/>
+                                        <constraint firstAttribute="height" constant="45" id="dpK-8j-3fp"/>
+                                    </constraints>
+                                    <state key="normal" title="F">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waU-tK-9ZZ" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="170.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="GW3-X4-Jwh"/>
+                                        <constraint firstAttribute="height" constant="45" id="qSv-ZA-IrX"/>
+                                    </constraints>
+                                    <state key="normal" title="G">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9V-dL-dsO" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="207.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="QgG-pG-tBh"/>
+                                        <constraint firstAttribute="width" constant="30" id="yIa-1y-BLy"/>
+                                    </constraints>
+                                    <state key="normal" title="H">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-0k-xtV" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="244.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="2Mr-uq-Xxd"/>
+                                        <constraint firstAttribute="width" constant="30" id="Bbb-th-SUc"/>
+                                    </constraints>
+                                    <state key="normal" title="J">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-wQ-N16" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="282" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="WTF-qr-Ar9"/>
+                                        <constraint firstAttribute="height" constant="45" id="g4z-NW-XSp"/>
+                                    </constraints>
+                                    <state key="normal" title="K">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-2b-ZhD" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="319" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="BvX-fs-wMF"/>
+                                        <constraint firstAttribute="height" constant="45" id="rVO-Cl-3gZ"/>
+                                    </constraints>
+                                    <state key="normal" title="L">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUe-mr-q2c">
+                                    <rect key="frame" x="356" y="0.0" width="15" height="45"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="15" id="in9-hE-efC"/>
+                                        <constraint firstAttribute="height" constant="45" id="vQA-BE-Pv5"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="KRY-Gx-wbR"/>
+                                </view>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="Ieu-lv-weB"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
+                            <rect key="frame" x="0.0" y="156" width="371" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Hrp-0d-pKz"/>
+                                        <constraint firstAttribute="width" constant="45" id="dbT-Zh-blg"/>
+                                    </constraints>
+                                    <state key="normal" title="sh">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ML-lk-McI">
+                                    <rect key="frame" x="50" y="0.0" width="10" height="45"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="4Bq-oE-tRO"/>
+                                        <constraint firstAttribute="height" constant="45" id="9bG-Ak-950"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-oa-zvd" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="65" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="g6T-3w-hXO"/>
+                                        <constraint firstAttribute="height" constant="45" id="l08-s8-eMa"/>
+                                    </constraints>
+                                    <state key="normal" title="Z">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-EW-Nws" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="100.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="AeP-iI-9Wd"/>
+                                        <constraint firstAttribute="width" constant="30" id="eyd-38-vbx"/>
+                                    </constraints>
+                                    <state key="normal" title="X">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="135.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="EJJ-hi-bwN"/>
+                                        <constraint firstAttribute="height" constant="45" id="vw2-jI-Io2"/>
+                                    </constraints>
+                                    <state key="normal" title="C">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-aw-jXe" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="170.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="18P-jj-WSF"/>
+                                        <constraint firstAttribute="height" constant="45" id="rJ5-pD-ReY"/>
+                                    </constraints>
+                                    <state key="normal" title="V">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-r9-PbP" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="205.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Dv9-j2-uMx"/>
+                                        <constraint firstAttribute="width" constant="30" id="cTt-Kx-KKu"/>
+                                    </constraints>
+                                    <state key="normal" title="B">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sr-1d-RK5" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="240.5" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="WwF-p0-2IN"/>
+                                        <constraint firstAttribute="width" constant="30" id="phm-0p-uyp"/>
+                                    </constraints>
+                                    <state key="normal" title="N">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-22-wnK" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="276" y="0.0" width="30" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="1jW-W7-sa9"/>
+                                        <constraint firstAttribute="height" constant="45" id="5fP-LD-xhs"/>
+                                    </constraints>
+                                    <state key="normal" title="M">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79p-iq-vOU">
+                                    <rect key="frame" x="311" y="0.0" width="10" height="45"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="fco-Wy-pGC"/>
+                                        <constraint firstAttribute="width" constant="10" id="rg9-v6-IX3"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RD-XH-wdi" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="326" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="3pJ-wj-czK"/>
+                                        <constraint firstAttribute="height" constant="45" id="QdF-c3-e1C"/>
+                                    </constraints>
+                                    <state key="normal" title="del">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-nE-KMS" userLabel="Forth Row Stack View">
+                            <rect key="frame" x="0.0" y="208" width="371" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-p7-mXV" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="FEh-JX-hAk"/>
+                                        <constraint firstAttribute="height" constant="45" id="aIp-L2-OxM"/>
+                                    </constraints>
+                                    <state key="normal" title="123">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwE-FE-mtb" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="53" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="dEw-fx-RVN"/>
+                                        <constraint firstAttribute="height" constant="45" id="wTz-4H-UQE"/>
+                                    </constraints>
+                                    <state key="normal" title="next">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-I5-mXE" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="106" y="0.0" width="157" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="T8G-y3-AwW"/>
+                                    </constraints>
+                                    <state key="normal" title="space">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-TP-K6i" customClass="EperantoKeyButton" customModule="Klavaroj" customModuleProvider="target">
+                                    <rect key="frame" x="271" y="0.0" width="100" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="au2-rB-9Uw"/>
+                                        <constraint firstAttribute="height" constant="45" id="nzr-JI-Twb"/>
+                                    </constraints>
+                                    <state key="normal" title="return">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="T3m-BV-hRo" secondAttribute="bottom" constant="2" id="V5V-Tk-WKP"/>
+                <constraint firstItem="T3m-BV-hRo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="ecF-Zv-7Qd"/>
+                <constraint firstItem="T3m-BV-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="f1Z-eV-G9M"/>
+                <constraint firstAttribute="trailing" secondItem="T3m-BV-hRo" secondAttribute="trailing" constant="2" id="zlw-BT-JbF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="LetterCButton" destination="rey-HA-rFo" id="8os-hZ-9C1"/>
+                <outlet property="LetterGButton" destination="waU-tK-9ZZ" id="fzC-t1-cBh"/>
+                <outlet property="LetterHButton" destination="H9V-dL-dsO" id="0tm-2e-xAP"/>
+                <outlet property="LetterJButton" destination="Sab-0k-xtV" id="Qgh-m1-TxI"/>
+                <outlet property="LetterSButton" destination="RYV-Kt-Mm7" id="Nvk-g7-FXV"/>
+                <outlet property="LetterUButton" destination="ZCB-d6-ml1" id="GER-Wm-tnd"/>
+                <outlet property="deleteButton" destination="3RD-XH-wdi" id="wPZ-wv-TkC"/>
+                <outlet property="nextKeyboardButton" destination="OwE-FE-mtb" id="vQu-uJ-e1a"/>
+                <outlet property="numberButton" destination="UfN-p7-mXV" id="lqe-Bj-9Kb"/>
+                <outlet property="previewLabel" destination="XO7-0b-XiH" id="C5e-5c-WbY"/>
+                <outlet property="returnButton" destination="Zpm-TP-K6i" id="hhX-FA-5he"/>
+                <outlet property="shiftButton" destination="nDX-0g-ITi" id="sy4-Xf-sxN"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="152.00892857142856"/>
+        </view>
+    </objects>
+</document>

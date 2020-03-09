@@ -14,6 +14,18 @@
 		B86134382416C81F00F17AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86134372416C81F00F17AFB /* Assets.xcassets */; };
 		B861343B2416C81F00F17AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86134392416C81F00F17AFB /* LaunchScreen.storyboard */; };
 		B86134462416C81F00F17AFB /* Klavaroj2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134452416C81F00F17AFB /* Klavaroj2Tests.swift */; };
+		B86134562416D09C00F17AFB /* EsperantoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134502416D09C00F17AFB /* EsperantoColors.swift */; };
+		B86134572416D09C00F17AFB /* EsperantoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134502416D09C00F17AFB /* EsperantoColors.swift */; };
+		B86134582416D09C00F17AFB /* EperantoKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134512416D09C00F17AFB /* EperantoKeyButton.swift */; };
+		B86134592416D09C00F17AFB /* EperantoKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134512416D09C00F17AFB /* EperantoKeyButton.swift */; };
+		B861345A2416D09C00F17AFB /* EsperantoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134522416D09C00F17AFB /* EsperantoDecoder.swift */; };
+		B861345B2416D09C00F17AFB /* EsperantoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134522416D09C00F17AFB /* EsperantoDecoder.swift */; };
+		B861345C2416D09C00F17AFB /* EsperantoKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86134532416D09C00F17AFB /* EsperantoKeyboardView.xib */; };
+		B861345D2416D09C00F17AFB /* EsperantoKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86134532416D09C00F17AFB /* EsperantoKeyboardView.xib */; };
+		B861345E2416D09C00F17AFB /* EsperantoKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134542416D09C00F17AFB /* EsperantoKeyboardView.swift */; };
+		B861345F2416D09C00F17AFB /* EsperantoKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134542416D09C00F17AFB /* EsperantoKeyboardView.swift */; };
+		B86134602416D09C00F17AFB /* EsperantoAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134552416D09C00F17AFB /* EsperantoAlphabet.swift */; };
+		B86134612416D09C00F17AFB /* EsperantoAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86134552416D09C00F17AFB /* EsperantoAlphabet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +50,12 @@
 		B86134412416C81F00F17AFB /* Klavaroj2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Klavaroj2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86134452416C81F00F17AFB /* Klavaroj2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klavaroj2Tests.swift; sourceTree = "<group>"; };
 		B86134472416C81F00F17AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B86134502416D09C00F17AFB /* EsperantoColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsperantoColors.swift; sourceTree = "<group>"; };
+		B86134512416D09C00F17AFB /* EperantoKeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EperantoKeyButton.swift; sourceTree = "<group>"; };
+		B86134522416D09C00F17AFB /* EsperantoDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsperantoDecoder.swift; sourceTree = "<group>"; };
+		B86134532416D09C00F17AFB /* EsperantoKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EsperantoKeyboardView.xib; sourceTree = "<group>"; };
+		B86134542416D09C00F17AFB /* EsperantoKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsperantoKeyboardView.swift; sourceTree = "<group>"; };
+		B86134552416D09C00F17AFB /* EsperantoAlphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsperantoAlphabet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +104,12 @@
 				B86134372416C81F00F17AFB /* Assets.xcassets */,
 				B86134392416C81F00F17AFB /* LaunchScreen.storyboard */,
 				B861343C2416C81F00F17AFB /* Info.plist */,
+				B86134512416D09C00F17AFB /* EperantoKeyButton.swift */,
+				B86134552416D09C00F17AFB /* EsperantoAlphabet.swift */,
+				B86134502416D09C00F17AFB /* EsperantoColors.swift */,
+				B86134522416D09C00F17AFB /* EsperantoDecoder.swift */,
+				B86134542416D09C00F17AFB /* EsperantoKeyboardView.swift */,
+				B86134532416D09C00F17AFB /* EsperantoKeyboardView.xib */,
 			);
 			path = Klavaroj2;
 			sourceTree = "<group>";
@@ -183,6 +207,7 @@
 				B861343B2416C81F00F17AFB /* LaunchScreen.storyboard in Resources */,
 				B86134382416C81F00F17AFB /* Assets.xcassets in Resources */,
 				B86134362416C81D00F17AFB /* Main.storyboard in Resources */,
+				B861345C2416D09C00F17AFB /* EsperantoKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B861345D2416D09C00F17AFB /* EsperantoKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +229,11 @@
 				B86134332416C81D00F17AFB /* ViewController.swift in Sources */,
 				B861342F2416C81D00F17AFB /* AppDelegate.swift in Sources */,
 				B86134312416C81D00F17AFB /* SceneDelegate.swift in Sources */,
+				B86134582416D09C00F17AFB /* EperantoKeyButton.swift in Sources */,
+				B86134602416D09C00F17AFB /* EsperantoAlphabet.swift in Sources */,
+				B861345A2416D09C00F17AFB /* EsperantoDecoder.swift in Sources */,
+				B861345E2416D09C00F17AFB /* EsperantoKeyboardView.swift in Sources */,
+				B86134562416D09C00F17AFB /* EsperantoColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B861345B2416D09C00F17AFB /* EsperantoDecoder.swift in Sources */,
+				B86134592416D09C00F17AFB /* EperantoKeyButton.swift in Sources */,
+				B86134612416D09C00F17AFB /* EsperantoAlphabet.swift in Sources */,
 				B86134462416C81F00F17AFB /* Klavaroj2Tests.swift in Sources */,
+				B861345F2416D09C00F17AFB /* EsperantoKeyboardView.swift in Sources */,
+				B86134572416D09C00F17AFB /* EsperantoColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

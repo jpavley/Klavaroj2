@@ -71,6 +71,10 @@ Once installed you can use long press or letter-x (cx = </string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="instructionsTextView" destination="FFb-8y-v8x" id="Shr-DY-Jb0"/>
+                        <outlet property="textField" destination="0Xy-aT-Aru" id="0p4-3o-h1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

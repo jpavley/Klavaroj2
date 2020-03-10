@@ -73,9 +73,9 @@ class EsperantoKeyboardView: UIView {
   }
   
   func setNextKeyboardVisible(_ visible: Bool) {
-    spaceButtonToNextKeyboardConstraint.isActive = visible
-    spaceButtonToParentConstraint.isActive = !visible
-    nextKeyboardButton.isHidden = !visible
+//    spaceButtonToNextKeyboardConstraint.isActive = visible
+//    spaceButtonToParentConstraint.isActive = !visible
+//    nextKeyboardButton.isHidden = !visible
   }
   
   func setColorScheme(_ colorScheme: EsperantoColorScheme) {

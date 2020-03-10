@@ -89,7 +89,8 @@ class EsperantoKeyboardView: UIView {
         button.setTitleColor(colorScheme.buttonTextColor, for: [])
         button.tintColor = colorScheme.buttonTextColor
         
-        if button == nextKeyboardButton || button == deleteButton {
+        if button == nextKeyboardButton || button == deleteButton
+        || button == numberButton || button == returnButton {
           button.defaultBackgroundColor = colorScheme.buttonHighlightColor
           button.highlightBackgroundColor = colorScheme.buttonBackgroundColor
         } else {

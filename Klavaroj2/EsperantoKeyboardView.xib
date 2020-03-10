@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-BV-hRo" userLabel="Main Stack View">
-                    <rect key="frame" x="6" y="50" width="363" height="231"/>
+                    <rect key="frame" x="6" y="6" width="363" height="275"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="ĉ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-0b-XiH">
                             <rect key="frame" x="0.0" y="0.0" width="363" height="26"/>
@@ -26,7 +26,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-J6-ZMQ" userLabel="First Row Stack View">
-                            <rect key="frame" x="0.0" y="32.5" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="43.5" width="363" height="45"/>
                             <subviews>
                                 <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-vw-lPM" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="45"/>
@@ -122,7 +122,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-7q-Tma" userLabel="Second Row Stack View">
-                            <rect key="frame" x="0.0" y="83.5" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="105.5" width="363" height="45"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFT-7f-hhO">
                                     <rect key="frame" x="0.0" y="0.0" width="15" height="45"/>
@@ -223,7 +223,7 @@
                             <viewLayoutGuide key="safeArea" id="Ieu-lv-weB"/>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
-                            <rect key="frame" x="0.0" y="135" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="168" width="363" height="45"/>
                             <subviews>
                                 <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -322,7 +322,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-nE-KMS" userLabel="Forth Row Stack View">
-                            <rect key="frame" x="0.0" y="186" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="230" width="363" height="45"/>
                             <subviews>
                                 <button opaque="NO" tag="128" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-p7-mXV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -361,6 +361,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="Qrl-VP-Gcm"/>
                 </stackView>
             </subviews>
             <constraints>
@@ -379,6 +380,8 @@
                 <outlet property="LetterSButton" destination="RYV-Kt-Mm7" id="Nvk-g7-FXV"/>
                 <outlet property="LetterUButton" destination="ZCB-d6-ml1" id="GER-Wm-tnd"/>
                 <outlet property="deleteButton" destination="3RD-XH-wdi" id="wPZ-wv-TkC"/>
+                <outlet property="mainStackLeadingConstraint" destination="f1Z-eV-G9M" id="ACk-fv-wPW"/>
+                <outlet property="mainStackTrailingConstraint" destination="zlw-BT-JbF" id="XGO-ud-GHk"/>
                 <outlet property="nextKeyboardButton" destination="OwE-FE-mtb" id="vQu-uJ-e1a"/>
                 <outlet property="numberButton" destination="UfN-p7-mXV" id="lqe-Bj-9Kb"/>
                 <outlet property="previewLabel" destination="XO7-0b-XiH" id="C5e-5c-WbY"/>

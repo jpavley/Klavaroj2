@@ -37,6 +37,8 @@ class EsperantoKeyboardView: UIView {
   // button row constraints
   @IBOutlet var spaceButtonToParentConstraint: NSLayoutConstraint!
   @IBOutlet var spaceButtonToNextKeyboardConstraint: NSLayoutConstraint!
+  @IBOutlet var mainStackLeadingConstraint: NSLayoutConstraint!
+  @IBOutlet var mainStackTrailingConstraint: NSLayoutConstraint!
   
   weak var delegate: EsperantroKeyboardViewDelegate?
   
@@ -76,6 +78,12 @@ class EsperantoKeyboardView: UIView {
 //    spaceButtonToNextKeyboardConstraint.isActive = visible
 //    spaceButtonToParentConstraint.isActive = !visible
 //    nextKeyboardButton.isHidden = !visible
+    
+    // on an iPhone SE make as much room for the buttons as possible
+    if UIDevice().name == "iPhone SE" {
+      mainStackLeadingConstraint.constant = 0.0
+      mainStackTrailingConstraint.constant = 0.0
+    }
   }
   
   func setColorScheme(_ colorScheme: EsperantoColorScheme) {

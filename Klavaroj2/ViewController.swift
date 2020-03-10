@@ -18,7 +18,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    
+        
     // Add an observer so that we can adjust the UI when the keyboard is showing
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     
@@ -31,6 +31,11 @@ class ViewController: UIViewController {
     esperantoKeyboardView = objects.first as? EsperantoKeyboardView
     esperantoKeyboardView.delegate = self
     
+    // if the iPhone has a home button subtract the safe area from the height of the keyboard view
+    if UIDevice().name == "iPhone SE" || UIDevice().name == "iPhone 8" {
+      esperantoKeyboardView.frame = CGRect(x: 0.0, y: 0.0, width: 375.0, height: 257.0)
+    }
+        
     // Add the keyboard to a container view so that it's sized correctly
     let keyboardContainerView = UIView(frame: esperantoKeyboardView.frame)
     keyboardContainerView.addSubview(esperantoKeyboardView)

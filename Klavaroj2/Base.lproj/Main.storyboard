@@ -19,7 +19,7 @@
                                 <rect key="frame" x="8" y="52" width="398" height="802"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFb-8y-v8x">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="378"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="336"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -47,6 +47,11 @@ Once installed you can use long press or letter-x (cx = </string>
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test your esperanto typing skills here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Xy-aT-Aru">
+                                        <rect key="frame" x="0.0" y="344" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLd-MN-hjv">
                                         <rect key="frame" x="0.0" y="386" width="398" height="416"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

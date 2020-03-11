@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     let objects = nib.instantiate(withOwner: nil, options: nil)
     esperantoKeyboardView = objects.first as? EsperantoKeyboardView
     esperantoKeyboardView.delegate = self
-    
+        
     // if the iPhone has a home button subtract the safe area from the height of the keyboard view
     if UIDevice().name == "iPhone SE" || UIDevice().name == "iPhone 8" {
       esperantoKeyboardView.frame = CGRect(x: 0.0, y: 0.0, width: 375.0, height: 257.0)

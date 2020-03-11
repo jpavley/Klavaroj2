@@ -34,11 +34,14 @@ class EsperantoKeyboardView: UIView {
   @IBOutlet var numberButton: UIButton!
   @IBOutlet var returnButton: UIButton!
   
-  // button row constraints
-  @IBOutlet var spaceButtonToParentConstraint: NSLayoutConstraint!
-  @IBOutlet var spaceButtonToNextKeyboardConstraint: NSLayoutConstraint!
+  // button constraints
+  @IBOutlet var nextButtonWidthConstraint: NSLayoutConstraint!
   @IBOutlet var mainStackLeadingConstraint: NSLayoutConstraint!
   @IBOutlet var mainStackTrailingConstraint: NSLayoutConstraint!
+  @IBOutlet var keyButtonWidthConstraint: NSLayoutConstraint!
+  @IBOutlet var leftOfZSpaceConstraint: NSLayoutConstraint!
+  @IBOutlet var rightOfMSpaceConstraint: NSLayoutConstraint!
+
   
   weak var delegate: EsperantroKeyboardViewDelegate?
   
@@ -75,14 +78,19 @@ class EsperantoKeyboardView: UIView {
   }
   
   func setNextKeyboardVisible(_ visible: Bool) {
-//    spaceButtonToNextKeyboardConstraint.isActive = visible
-//    spaceButtonToParentConstraint.isActive = !visible
-//    nextKeyboardButton.isHidden = !visible
+    nextKeyboardButton.isHidden = !visible
     
     // on an iPhone SE make as much room for the buttons as possible
     if UIDevice().name == "iPhone SE" {
       mainStackLeadingConstraint.constant = 0.0
       mainStackTrailingConstraint.constant = 0.0
+    }
+    
+    // on a an iPhone 11 Pro Max make the buttons a bit wider
+    if UIDevice().name == "iPhone 11 Pro Max" {
+      keyButtonWidthConstraint.constant = 34
+      leftOfZSpaceConstraint.constant = 3
+      rightOfMSpaceConstraint.constant = 3
     }
   }
   

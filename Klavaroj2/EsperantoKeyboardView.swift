@@ -35,7 +35,7 @@ class EsperantoKeyboardView: UIView {
   @IBOutlet var returnButton: UIButton!
   
   // button constraints
-  @IBOutlet var nextButtonWidthConstraint: NSLayoutConstraint!
+  @IBOutlet var nextButtonWidthConstraint: NSLayoutConstraint! // unused
   @IBOutlet var mainStackLeadingConstraint: NSLayoutConstraint!
   @IBOutlet var mainStackTrailingConstraint: NSLayoutConstraint!
   @IBOutlet var keyButtonWidthConstraint: NSLayoutConstraint!
@@ -64,7 +64,7 @@ class EsperantoKeyboardView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     setColorScheme(.light)
-    setNextKeyboardVisible(false)
+    adjustKeyboard(false)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -74,11 +74,15 @@ class EsperantoKeyboardView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     setColorScheme(.light)
-    setNextKeyboardVisible(false)
+    adjustKeyboard(false)
   }
   
-  func setNextKeyboardVisible(_ visible: Bool) {
+  func adjustKeyboard(_ visible: Bool) {
     nextKeyboardButton.isHidden = !visible
+    
+    // TODO: Need to catch every shipping iPhone for keyboard key sizing and spacing.
+    //       There seem to be two kinds: Those with a home bottom and those without.
+    //       Need to deal with new iPhones as well (will they have home buttons?).
     
     // on an iPhone SE make as much room for the buttons as possible
     if UIDevice().name == "iPhone SE" {
@@ -100,13 +104,14 @@ class EsperantoKeyboardView: UIView {
     previewLabel.textColor = colorScheme.previewTextColor
     backgroundColor = colorScheme.backgroundColor
     
-    for view in subviews {
-      if let button = view as? EsperantoKeyButton {
+    for tag in 100...131 {
+      if let button = viewWithTag(tag) as? EsperantoKeyButton {
         button.setTitleColor(colorScheme.buttonTextColor, for: [])
         button.tintColor = colorScheme.buttonTextColor
         
         if button == nextKeyboardButton || button == deleteButton
-        || button == numberButton || button == returnButton {
+        || button == numberButton || button == returnButton
+        || button == shiftButton {
           button.defaultBackgroundColor = colorScheme.buttonHighlightColor
           button.highlightBackgroundColor = colorScheme.buttonBackgroundColor
         } else {

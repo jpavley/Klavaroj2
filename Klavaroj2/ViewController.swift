@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     // Add KVO for textfield to determine when cursor moves
     textField.addObserver(self, forKeyPath: "selectedTextRange", options: .new, context: nil)
     
-    esperantoKeyboardView.setNextKeyboardVisible(false)
+    //esperantoKeyboardView.setNextKeyboardVisible(false)
   }
   
   override func viewWillAppear(_ animated: Bool) {

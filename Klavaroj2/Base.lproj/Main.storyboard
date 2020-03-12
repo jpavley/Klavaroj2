@@ -15,65 +15,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IVR-py-4RF">
-                                <rect key="frame" x="8" y="52" width="398" height="802"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFb-8y-v8x">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="336"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Welcome to the Klavaroj Esperanto Keyboard!
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFb-8y-v8x">
+                                <rect key="frame" x="8" y="52" width="398" height="511"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Welcome to the Klavaroj Esperanto Keyboard!
 This keyboard enable you to easily type the accented characters used in Esperanto including ĉ, ĝ, ĥ, ĵ, ŝ, and û.
 To enable the Klavaroj Esperanto Keyboard for all your apps go to your iPhone Settings and choose General: Keyboard: Add New Keyboard.
 Once installed you can use long press or letter-x (cx = </string>
-                                                <attributes>
-                                                    <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <font key="NSFont" metaFont="system" size="18"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ĉ)">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" to enter an accented character.">
-                                                <attributes>
-                                                    <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <font key="NSFont" metaFont="system" size="18"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test your esperanto typing skills here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Xy-aT-Aru">
-                                        <rect key="frame" x="0.0" y="344" width="398" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLd-MN-hjv">
-                                        <rect key="frame" x="0.0" y="386" width="398" height="416"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="xLd-MN-hjv" firstAttribute="height" secondItem="IVR-py-4RF" secondAttribute="height" multiplier="0.5" constant="15" id="4X4-3b-NUl"/>
-                                </constraints>
-                            </stackView>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ĉ)">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" to enter an accented character.">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test your esperanto typing skills here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Xy-aT-Aru">
+                                <rect key="frame" x="8" y="571" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="IVR-py-4RF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="1UG-eR-q5x"/>
-                            <constraint firstItem="IVR-py-4RF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="E6u-Zu-JIA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IVR-py-4RF" secondAttribute="bottom" constant="8" id="Gts-2A-mQB"/>
-                            <constraint firstAttribute="trailing" secondItem="IVR-py-4RF" secondAttribute="trailing" constant="8" id="m3A-lH-FCz"/>
+                            <constraint firstItem="0Xy-aT-Aru" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-257" id="DUj-Ok-8dx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Xy-aT-Aru" secondAttribute="trailing" constant="8" id="FNA-Yy-aGM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFb-8y-v8x" secondAttribute="trailing" constant="8" id="MKO-mc-xmd"/>
+                            <constraint firstItem="0Xy-aT-Aru" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="YaL-SH-dQD"/>
+                            <constraint firstItem="0Xy-aT-Aru" firstAttribute="top" secondItem="FFb-8y-v8x" secondAttribute="bottom" constant="8" id="jt4-jx-7IX"/>
+                            <constraint firstItem="FFb-8y-v8x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="kmH-yY-4MW"/>
+                            <constraint firstItem="FFb-8y-v8x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="yn3-KK-Qis"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="instructionsTextView" destination="FFb-8y-v8x" id="Shr-DY-Jb0"/>
                         <outlet property="textField" destination="0Xy-aT-Aru" id="0p4-3o-h1L"/>
+                        <outlet property="textFieldBottomConstraint" destination="DUj-Ok-8dx" id="8nk-nn-W3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

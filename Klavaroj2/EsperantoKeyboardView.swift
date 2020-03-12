@@ -45,8 +45,13 @@ class EsperantoKeyboardView: UIView {
   weak var delegate: EsperantroKeyboardViewDelegate?
   
   @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
-    guard let label = sender.titleLabel, let text = label.text?.lowercased() else { return }
-    print("letterKeyTapped \(text)")
+    guard
+      let label = sender.titleLabel,
+      let text = label.text?.lowercased()
+      else
+    { return }
+    
+    print("letterKeyTapped \(text) \(sender.tag)")
   }
   
   

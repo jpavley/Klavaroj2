@@ -74,28 +74,32 @@ class EsperantoKeyboardView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     setColorScheme(.light)
-    adjustKeyboard(false)
+    adjustKeyboard(true)
   }
   
   func adjustKeyboard(_ visible: Bool) {
     nextKeyboardButton.isHidden = !visible
     
-    // TODO: Need to catch every shipping iPhone for keyboard key sizing and spacing.
-    //       There seem to be two kinds: Those with a home bottom and those without.
-    //       Need to deal with new iPhones as well (will they have home buttons?).
+    let screenWidth = UIScreen.main.bounds.width
     
-    // on an iPhone SE make as much room for the buttons as possible
-    if UIDevice().name == "iPhone SE" {
+    // iPhone SE or smaller
+    if screenWidth <= 320 {
       mainStackLeadingConstraint.constant = 0.0
       mainStackTrailingConstraint.constant = 0.0
     }
     
-    // on a an iPhone 11 Pro Max make the buttons a bit wider
-    if UIDevice().name == "iPhone 11 Pro Max" {
+    // iPhone 8, 11 Pro
+    if screenWidth == 375 {
+      // don't do anything
+    }
+    
+    // iPhone 11 Pro Max, 11 Pro, 11, 8 Plus
+    if screenWidth >= 414 {
       keyButtonWidthConstraint.constant = 34
       leftOfZSpaceConstraint.constant = 3
       rightOfMSpaceConstraint.constant = 3
     }
+    
   }
   
   func setColorScheme(_ colorScheme: EsperantoColorScheme) {

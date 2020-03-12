@@ -37,60 +37,90 @@
                                     <state key="normal" title="Q">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="h79-TE-y8p"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-eZ-6SZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="37" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="W">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="mFA-Bx-N6C"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-Ls-ly0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="74" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="E">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="OAi-eo-N33"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-vo-Bpe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="111" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="R">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="b3M-aN-bIs"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="148" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="T">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sqw-KP-SVj"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBH-ng-o1n" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="185" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="Y">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="eBP-wD-TZr"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCB-d6-ml1" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="222" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="U">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="bpU-0B-6D0"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-AP-u1L" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="259" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="I">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="E4j-ky-dKy"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-AX-Vha" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="296" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="O">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vha-a9-VEw"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41T-mT-dev" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="333" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="P">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sij-Ml-3CJ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -120,54 +150,81 @@
                                     <state key="normal" title="A">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="XTL-UX-hxO"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-Kt-Mm7" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="57.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="S">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="8jT-FJ-gpf"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-AW-tN3" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="94" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="D">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Jh-k8-EaE"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-tQ-jRl" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="130" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="F">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="wBb-oC-MYo"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waU-tK-9ZZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="166.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="G">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Of-Sr-koP"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9V-dL-dsO" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="203" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="H">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4cs-e5-gxJ"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-0k-xtV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="239" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="J">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="dO2-W2-hl6"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-wQ-N16" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="275.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="K">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="81X-of-wWh"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-2b-ZhD" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="311.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="L">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="8i8-zT-563"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUe-mr-q2c">
                                     <rect key="frame" x="348" y="0.0" width="15" height="45"/>
@@ -203,42 +260,63 @@
                                     <state key="normal" title="Z">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="FVz-3T-vCJ"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-EW-Nws" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="94" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="X">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0yL-l4-TbV"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="130" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="C">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ixf-VW-WTg"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-aw-jXe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="166.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="V">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vpa-jR-dGB"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-r9-PbP" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="203" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="B">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ixl-Vb-g5n"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sr-1d-RK5" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="239" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="N">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Dk-A1-KjK"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-22-wnK" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="275.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="M">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="h5a-TC-nd7"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79p-iq-vOU">
                                     <rect key="frame" x="311.5" y="0.0" width="0.0" height="45"/>

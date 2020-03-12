@@ -41,9 +41,14 @@ class EsperantoKeyboardView: UIView {
   @IBOutlet var keyButtonWidthConstraint: NSLayoutConstraint!
   @IBOutlet var leftOfZSpaceConstraint: NSLayoutConstraint!
   @IBOutlet var rightOfMSpaceConstraint: NSLayoutConstraint!
-
   
   weak var delegate: EsperantroKeyboardViewDelegate?
+  
+  @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
+    guard let label = sender.titleLabel, let text = label.text?.lowercased() else { return }
+    print("letterKeyTapped \(text)")
+  }
+  
   
   var cacheLetter: String {
     return EsperantoDecoder.letter(from: signalCache) ?? "?"
@@ -129,13 +134,8 @@ class EsperantoKeyboardView: UIView {
 
 // MARK: - Actions
 extension EsperantoKeyboardView {
-  @IBAction func dotPressed(button: UIButton) {
-    addSignal(.c)
-  }
-
-  @IBAction func dashPressed() {
-    addSignal(.x)
-  }
+  
+  // TODO: func letterKeyLongPress()
 
   @IBAction func deletePressed() {
     if signalCache.count > 0 {

@@ -56,7 +56,7 @@
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="148" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="T">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>

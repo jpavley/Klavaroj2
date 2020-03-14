@@ -43,32 +43,68 @@ class EsperantoKeyboardView: UIView {
   @IBOutlet var rightOfMSpaceConstraint: NSLayoutConstraint!
   
   weak var delegate: EsperantroKeyboardViewDelegate?
+  var localTextCache = [String]()
   
   @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
     
+    /// Return if label or letter is not available
     guard
       let label = sender.titleLabel,
-      let text = label.text?.lowercased()
+      let letter = label.text?.lowercased()
       else { return }
     
-    if EsperantoDecoder.signals.contains(text) {
-      addSignal(EsperantoDecoder.Signal(rawValue: text)!)
-    } else {
-      delegate?.insertCharacter(text)
+    var secondToLastIndex = 0
+
+    /// Returns true if letter is member of the special set (cghjsu)
+    /// - Parameter letter: The character to be tested
+    func isSpecial(_ letter: String) -> Bool {
+      return "cghjsu".contains(letter)
     }
-  }
-  
-  @IBAction func letterXTapped(_ sender: EsperantoKeyButton) {
     
-    if signalCache.count > 0 {
-      // Clear our the signal cache
-      signalCache = []
-    } else {
-      // TODO: match case
-      delegate?.insertCharacter("x")
+    /// Dictionary of specical characters and their replacements
+    var subsitutes: [String: String] = [
+      "c" : "ĉ",
+      "g" : "ĝ",
+      "h" : "ĥ",
+      "j" : "ĵ",
+      "s" : "ŝ",
+      "u" : "û"
+    ]
+    
+    /// Replaces a special sequence, like cx, with an accented character, like ĉ
+    /// - Parameter letter: The special character to be subsituted
+    /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
+    func subsitute(_ letter: String) {
+      localTextCache = [String]()
+      print("transformation", localTextCache)
+      delegate?.deleteCharacterBeforeCursor()
+      delegate?.deleteCharacterBeforeCursor()
+      delegate?.insertCharacter(subsitutes[letter]!)
     }
+    
+    /// Inserts letter into `localTextCache` and `EsperantroKeyboardViewDelegate`
+    /// - Parameter letter: The character represented by the keypress
+    func processKeyPress(_ letter: String) {
+      localTextCache.append(letter)
+      print("insertion", localTextCache)
+      delegate?.insertCharacter(letter)
+      
+      /// The index of the special character will always be the index before the "x"
+      secondToLastIndex = localTextCache.count - 2
+      
+      if letter == "x" {
+        /// The "x" is a signal that we might need to subsitute a special character...
+        /// but only if there are at least 2 characters in the `localTextCache` and if
+        /// the character before the "x" is a special character!
+        if localTextCache.count >= 2 && isSpecial(localTextCache[secondToLastIndex]) {
+          subsitute(localTextCache[secondToLastIndex])
+        }
+      }
+    }
+        
+    processKeyPress(letter)
   }
-  
+    
   var cacheLetter: String {
     return EsperantoDecoder.letter(from: signalCache) ?? "?"
   }

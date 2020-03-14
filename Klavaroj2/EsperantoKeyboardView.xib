@@ -271,7 +271,6 @@
                                     </state>
                                     <connections>
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0yL-l4-TbV"/>
-                                        <action selector="letterXTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zt7-co-wYI"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">

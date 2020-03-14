@@ -52,15 +52,7 @@ class EsperantoKeyboardView: UIView {
       let label = sender.titleLabel,
       let letter = label.text?.lowercased()
       else { return }
-    
-    var secondToLastIndex = 0
-
-    /// Returns true if letter is member of the special set (cghjsu)
-    /// - Parameter letter: The character to be tested
-    func isSpecial(_ letter: String) -> Bool {
-      return "cghjsu".contains(letter)
-    }
-    
+        
     /// Dictionary of specical characters and their replacements
     var subsitutes: [String: String] = [
       "c" : "ĉ",
@@ -71,6 +63,15 @@ class EsperantoKeyboardView: UIView {
       "u" : "û"
     ]
     
+    /// The trigger character is used to signal a potential subsitution based on the character before the trigger
+    let trigger = "x"
+
+    /// Returns true if letter is member of the special set (cghjsu)
+    /// - Parameter letter: The character to be tested
+    func isSpecial(_ letter: String) -> Bool {
+      return subsitutes.keys.contains(letter)
+    }
+        
     /// Replaces a special sequence, like cx, with an accented character, like ĉ
     /// - Parameter letter: The special character to be subsituted
     /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
@@ -90,12 +91,12 @@ class EsperantoKeyboardView: UIView {
       delegate?.insertCharacter(letter)
       
       /// The index of the special character will always be the index before the "x"
-      secondToLastIndex = localTextCache.count - 2
+      let secondToLastIndex = localTextCache.count - 2
       
-      if letter == "x" {
-        /// The "x" is a signal that we might need to subsitute a special character...
+      if letter == trigger {
+        /// The `trigger` is a signal that we might need to subsitute a special character...
         /// but only if there are at least 2 characters in the `localTextCache` and if
-        /// the character before the "x" is a special character!
+        /// the character before the `trigger` is a special character!
         if localTextCache.count >= 2 && isSpecial(localTextCache[secondToLastIndex]) {
           subsitute(localTextCache[secondToLastIndex])
         }

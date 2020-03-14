@@ -87,7 +87,8 @@ extension ViewController {
   override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
     if keyPath == "selectedTextRange" {
       // Clear out the current signal as the cursor placement changed
-      esperantoKeyboardView.signalCache = []
+      // esperantoKeyboardView.signalCache = []
+      esperantoKeyboardView.localTextCache = [String]()
     }
   }
 }

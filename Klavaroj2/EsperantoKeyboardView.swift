@@ -104,23 +104,6 @@ class EsperantoKeyboardView: UIView {
         
     processKeyPress(letter)
   }
-    
-  var cacheLetter: String {
-    return EsperantoDecoder.letter(from: signalCache) ?? "?"
-  }
-  
-  var signalCache: [EsperantoDecoder.Signal] = [] {
-    didSet {
-      var text = ""
-      if signalCache.count > 0 {
-        text = signalCache.reduce("") {
-          return $0 + $1.rawValue;
-        }
-        text += "= \(cacheLetter)"
-      }
-      previewLabel.text = text
-    }
-  }
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -194,47 +177,10 @@ extension EsperantoKeyboardView {
   // TODO: func letterKeyLongPress()
 
   @IBAction func deletePressed() {
-    if signalCache.count > 0 {
-      // Remove last signal
-      signalCache.removeLast()
-    } else {
-      // Already didn't have a signal
-      if let previousCharacter = delegate?.characterBeforeCursor() {
-        if let previousSignals = EsperantoDecoder.code["\(previousCharacter)"] {
-          signalCache = previousSignals
-        }
-      }
-    }
-
-    if signalCache.count == 0 {
-      // Delete because no more signal
-      delegate?.deleteCharacterBeforeCursor()
-    } else {
-      // Building on existing letter by deleting current
-      delegate?.deleteCharacterBeforeCursor()
-      delegate?.insertCharacter(cacheLetter)
-    }
+    delegate?.deleteCharacterBeforeCursor()
   }
 
   @IBAction func spacePressed() {
     delegate?.insertCharacter(" ")
   }
 }
-
-// MARK: - Private Methods
-private extension EsperantoKeyboardView {
-  func addSignal(_ signal: EsperantoDecoder.Signal) {
-        
-    if signalCache.count == 0 {
-      // Have an empty cache
-      signalCache.append(signal)
-      delegate?.insertCharacter(cacheLetter)
-    } else {
-      // Building on existing letter
-      signalCache.append(signal)
-      delegate?.deleteCharacterBeforeCursor()
-      delegate?.insertCharacter(cacheLetter)
-    }
-  }
-}
-

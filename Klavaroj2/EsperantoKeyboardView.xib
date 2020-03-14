@@ -16,7 +16,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-BV-hRo" userLabel="Main Stack View">
                     <rect key="frame" x="6" y="6" width="363" height="245"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="ĉ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-0b-XiH">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-0b-XiH">
                             <rect key="frame" x="0.0" y="0.0" width="363" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26" id="FsU-QN-87C"/>
@@ -271,6 +271,7 @@
                                     </state>
                                     <connections>
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0yL-l4-TbV"/>
+                                        <action selector="letterXTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zt7-co-wYI"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
@@ -332,6 +333,9 @@
                                     <state key="normal" title="del">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="deletePressed" destination="iN0-l3-epB" eventType="touchUpInside" id="Ve6-2f-1lG"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -362,6 +366,9 @@
                                     <state key="normal" title="space">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="spacePressed" destination="iN0-l3-epB" eventType="touchUpInside" id="OmL-Re-NC6"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-TP-K6i" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="263" y="0.0" width="100" height="45"/>

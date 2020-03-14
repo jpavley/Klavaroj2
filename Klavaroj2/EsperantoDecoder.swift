@@ -21,6 +21,8 @@ struct EsperantoDecoder {
     case unknown = "?"
   }
   
+  static let signals = "cghjsux"
+  
   static var code: [String: [Signal]] = [
     "ĉ" : [.c,.x],
     "ĝ" : [.g,.x],

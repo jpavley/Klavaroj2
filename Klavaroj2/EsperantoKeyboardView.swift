@@ -45,15 +45,29 @@ class EsperantoKeyboardView: UIView {
   weak var delegate: EsperantroKeyboardViewDelegate?
   
   @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
+    
     guard
       let label = sender.titleLabel,
       let text = label.text?.lowercased()
-      else
-    { return }
+      else { return }
     
-    print("letterKeyTapped \(text) \(sender.tag)")
+    if EsperantoDecoder.signals.contains(text) {
+      addSignal(EsperantoDecoder.Signal(rawValue: text)!)
+    } else {
+      delegate?.insertCharacter(text)
+    }
   }
   
+  @IBAction func letterXTapped(_ sender: EsperantoKeyButton) {
+    
+    if signalCache.count > 0 {
+      // Clear our the signal cache
+      signalCache = []
+    } else {
+      // TODO: match case
+      delegate?.insertCharacter("x")
+    }
+  }
   
   var cacheLetter: String {
     return EsperantoDecoder.letter(from: signalCache) ?? "?"
@@ -68,6 +82,7 @@ class EsperantoKeyboardView: UIView {
         }
         text += "= \(cacheLetter)"
       }
+      previewLabel.text = text
     }
   }
   
@@ -166,18 +181,14 @@ extension EsperantoKeyboardView {
   }
 
   @IBAction func spacePressed() {
-    if signalCache.count > 0 {
-      // Clear our the signal cache
-      signalCache = []
-    } else {
-      delegate?.insertCharacter(" ")
-    }
+    delegate?.insertCharacter(" ")
   }
 }
 
 // MARK: - Private Methods
 private extension EsperantoKeyboardView {
   func addSignal(_ signal: EsperantoDecoder.Signal) {
+        
     if signalCache.count == 0 {
       // Have an empty cache
       signalCache.append(signal)

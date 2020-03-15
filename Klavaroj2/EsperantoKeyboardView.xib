@@ -239,15 +239,16 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
                             <rect key="frame" x="0.0" y="145.5" width="363" height="45"/>
                             <subviews>
-                                <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Hrp-0d-pKz"/>
                                         <constraint firstAttribute="width" constant="45" id="dbT-Zh-blg"/>
                                     </constraints>
-                                    <state key="normal" title="sh">
-                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </state>
+                                    <state key="normal" title="sh"/>
+                                    <connections>
+                                        <action selector="shiftKeyPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ra7-wX-ejX"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ML-lk-McI">
                                     <rect key="frame" x="51.5" y="0.0" width="0.0" height="45"/>

@@ -44,9 +44,16 @@ class EsperantoKeyboardView: UIView {
   
   weak var delegate: EsperantroKeyboardViewDelegate?
   var localTextCache = [String]()
+  var isShifted = false
   
-  // TODO: Handle upper case
-  // TODO: Get input from the physical keyboard
+  // TODO: Geet input from physical keyboard
+  
+  @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
+    isShifted = !isShifted
+    let colors = EsperantoColors(colorScheme: .dark)
+    setShiftKeyColor(colors)
+    updateKeyCaps()
+  }
   
   @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
     
@@ -80,18 +87,20 @@ class EsperantoKeyboardView: UIView {
     /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
     func subsitute(_ letter: String) {
       localTextCache = [String]()
-      print("transformation", localTextCache)
+      //print("transformation", localTextCache)
       delegate?.deleteCharacterBeforeCursor()
       delegate?.deleteCharacterBeforeCursor()
-      delegate?.insertCharacter(subsitutes[letter]!)
+      let casedLetter = isShifted ? subsitutes[letter]!.uppercased() : subsitutes[letter]!.lowercased()
+      delegate?.insertCharacter(casedLetter)
     }
     
     /// Inserts letter into `localTextCache` and `EsperantroKeyboardViewDelegate`
     /// - Parameter letter: The character represented by the keypress
     func processKeyPress(_ letter: String) {
       localTextCache.append(letter)
-      print("insertion", localTextCache)
-      delegate?.insertCharacter(letter)
+      //print("insertion", localTextCache)
+      let casedLetter = isShifted ? letter.uppercased() : letter.lowercased()
+      delegate?.insertCharacter(casedLetter)
       
       /// The index of the special character will always be the index before the "x"
       let secondToLastIndex = localTextCache.count - 2
@@ -113,6 +122,7 @@ class EsperantoKeyboardView: UIView {
     super.init(frame: frame)
     setColorScheme(.dark)
     adjustKeyboard(false)
+    updateKeyCaps()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -123,7 +133,27 @@ class EsperantoKeyboardView: UIView {
     super.awakeFromNib()
     setColorScheme(.dark)
     adjustKeyboard(true)
+    updateKeyCaps()
   }
+  
+  func updateKeyCaps() {
+    for tag in 100...131 {
+      
+      /// Return if label or letter is not available
+      guard
+        let button = viewWithTag(tag) as? EsperantoKeyButton,
+        let label = button.titleLabel,
+        let letter = label.text
+        else { return }
+      
+      if isShifted {
+        button.setTitle(letter.uppercased(), for: .normal)
+      } else {
+        button.setTitle(letter.lowercased(), for: .normal)
+      }
+    }
+  }
+  
   
   func adjustKeyboard(_ visible: Bool) {
     nextKeyboardButton.isHidden = !visible
@@ -150,20 +180,37 @@ class EsperantoKeyboardView: UIView {
     
   }
   
+  func setShiftKeyColor(_ colors: EsperantoColors) {
+    if let button = viewWithTag(119) as? EsperantoKeyButton {
+      if isShifted {
+        button.defaultBackgroundColor = colors.buttonHighlightColor
+        button.highlightBackgroundColor = colors.buttonBackgroundColor
+      } else {
+        button.defaultBackgroundColor = colors.buttonBackgroundColor
+        button.highlightBackgroundColor = colors.buttonHighlightColor
+      }
+    }
+  }
+  
   func setColorScheme(_ colorScheme: EsperantoColorScheme) {
     let colorScheme = EsperantoColors(colorScheme: colorScheme)
     previewLabel.backgroundColor = colorScheme.previewBackgroundColor
     previewLabel.textColor = colorScheme.previewTextColor
     backgroundColor = colorScheme.backgroundColor
     
+    // TODO: only modify cases of alphabetical keys
+    
     for tag in 100...131 {
       if let button = viewWithTag(tag) as? EsperantoKeyButton {
         button.setTitleColor(colorScheme.buttonTextColor, for: [])
         button.tintColor = colorScheme.buttonTextColor
         
+        if tag == 119 {
+          setShiftKeyColor(colorScheme)
+        }
+        
         if button == nextKeyboardButton || button == deleteButton
-        || button == numberButton || button == returnButton
-        || button == shiftButton {
+        || button == numberButton || button == returnButton {
           button.defaultBackgroundColor = colorScheme.buttonHighlightColor
           button.highlightBackgroundColor = colorScheme.buttonBackgroundColor
         } else {

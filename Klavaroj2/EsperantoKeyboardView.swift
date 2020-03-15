@@ -47,14 +47,10 @@ class EsperantoKeyboardView: UIView {
   var isShifted = false
   
   // TODO: Geet input from physical keyboard
-  
-  // TODO: Unshift at after letter key press
-  
+    
   @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
     isShifted = !isShifted
-    let colors = EsperantoColors(colorScheme: .dark)
-    setShiftKeyColor(colors)
-    updateKeyCaps()
+    updateShiftState()
   }
   
   @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
@@ -92,7 +88,15 @@ class EsperantoKeyboardView: UIView {
       //print("transformation", localTextCache)
       delegate?.deleteCharacterBeforeCursor()
       delegate?.deleteCharacterBeforeCursor()
+      
+      // TODO: Don't use isShifted to detect case of subsitute letter.
+      //       Instead, if the special character shifted then the
+      //       subsitute should be shifted.
+      
       let casedLetter = isShifted ? subsitutes[letter]!.uppercased() : subsitutes[letter]!.lowercased()
+      
+      // END of TODO
+      
       delegate?.insertCharacter(casedLetter)
     }
     
@@ -116,7 +120,10 @@ class EsperantoKeyboardView: UIView {
         }
       }
       
-      // unshfit here?
+      if isShifted {
+        isShifted = !isShifted
+        updateShiftState()
+      }
     }
         
     processKeyPress(letter)
@@ -182,6 +189,12 @@ class EsperantoKeyboardView: UIView {
       rightOfMSpaceConstraint.constant = 3
     }
     
+  }
+  
+  func updateShiftState() {
+    let colors = EsperantoColors(colorScheme: .dark)
+    setShiftKeyColor(colors)
+    updateKeyCaps()
   }
   
   func setShiftKeyColor(_ colors: EsperantoColors) {

@@ -76,7 +76,7 @@ class EsperantoKeyboardView: UIView {
     ]
     
     /// The trigger character is used to signal a potential subsitution based on the character before the trigger
-    let trigger = "x"
+    let trigger = "xX"
     
     /// Returns true if letter is member of the special set (cghjsu)
     /// - Parameter letter: The character to be tested
@@ -106,7 +106,7 @@ class EsperantoKeyboardView: UIView {
       /// The index of the special character will always be the index before the "x"
       let secondToLastIndex = localTextCache.count - 2
       
-      if letter == trigger {
+      if trigger.contains(letter) {
         /// The `trigger` is a signal that we might need to subsitute a special character...
         /// but only if there are at least 2 characters in the `localTextCache` and if
         /// the character before the `trigger` is a special character!
@@ -238,10 +238,12 @@ extension EsperantoKeyboardView {
   // TODO: func letterKeyLongPress()
   
   @IBAction func deletePressed() {
+    localTextCache = [String]()
     delegate?.deleteCharacterBeforeCursor()
   }
   
   @IBAction func spacePressed() {
+    localTextCache = [String]()
     delegate?.insertCharacter(" ")
   }
 }

@@ -48,6 +48,8 @@ class EsperantoKeyboardView: UIView {
   
   // TODO: Geet input from physical keyboard
   
+  // TODO: Unshift at after letter key press
+  
   @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
     isShifted = !isShifted
     let colors = EsperantoColors(colorScheme: .dark)
@@ -113,6 +115,8 @@ class EsperantoKeyboardView: UIView {
           subsitute(localTextCache[secondToLastIndex])
         }
       }
+      
+      // unshfit here?
     }
         
     processKeyPress(letter)

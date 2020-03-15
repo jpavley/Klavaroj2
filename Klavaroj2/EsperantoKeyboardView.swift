@@ -12,6 +12,7 @@ protocol EsperantroKeyboardViewDelegate: class {
   func insertCharacter(_ newCharacter: String)
   func deleteCharacterBeforeCursor()
   func characterBeforeCursor() -> String?
+  func text() -> String?
 }
 
 class EsperantoKeyboardView: UIView {
@@ -85,7 +86,6 @@ class EsperantoKeyboardView: UIView {
     /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
     func subsitute(_ letter: String) {
       localTextCache = [String]()
-      //print("transformation", localTextCache)
       delegate?.deleteCharacterBeforeCursor()
       delegate?.deleteCharacterBeforeCursor()
       
@@ -93,11 +93,18 @@ class EsperantoKeyboardView: UIView {
       //       Instead, if the special character shifted then the
       //       subsitute should be shifted.
       
-      let casedLetter = isShifted ? subsitutes[letter]!.uppercased() : subsitutes[letter]!.lowercased()
-      
+      let casedLetter = determinCaseForSubsitute() ? subsitutes[letter]!.uppercased() : subsitutes[letter]!.lowercased()
+            
       // END of TODO
       
       delegate?.insertCharacter(casedLetter)
+    }
+    
+    func determinCaseForSubsitute() -> Bool {
+      print(delegate?.text()!) // doesn't work
+      // TODO: need to detmine case of subsitute when specical character is typed...
+      //       What case was it typed in/
+      return false
     }
     
     /// Inserts letter into `localTextCache` and `EsperantroKeyboardViewDelegate`

@@ -100,6 +100,11 @@ private extension ViewController {
 
 // MARK: - EsperantroKeyboardViewDelegate
 extension ViewController: EsperantroKeyboardViewDelegate  {
+  
+  func text() -> String? {
+    return textField.text
+  }
+  
   /// Insert character after the textfield cursor
   func insertCharacter(_ newCharacter: String) {
     textField.insertText(newCharacter)

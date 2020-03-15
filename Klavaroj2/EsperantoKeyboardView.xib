@@ -28,7 +28,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-J6-ZMQ" userLabel="First Row Stack View">
                             <rect key="frame" x="0.0" y="36" width="363" height="45"/>
                             <subviews>
-                                <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-vw-lPM" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-vw-lPM" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="bzr-Tb-KaD"/>
@@ -41,7 +41,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="h79-TE-y8p"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-eZ-6SZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-eZ-6SZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="37" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="W">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,7 +50,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="mFA-Bx-N6C"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-Ls-ly0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-Ls-ly0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="74" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="E">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,7 +59,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="OAi-eo-N33"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-vo-Bpe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-vo-Bpe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="111" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="R">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -68,7 +68,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="b3M-aN-bIs"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="148" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="T">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -77,7 +77,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sqw-KP-SVj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBH-ng-o1n" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBH-ng-o1n" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="185" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="Y">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -86,7 +86,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="eBP-wD-TZr"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCB-d6-ml1" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCB-d6-ml1" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="222" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="U">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -95,7 +95,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="bpU-0B-6D0"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-AP-u1L" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-AP-u1L" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="259" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="I">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -104,7 +104,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="E4j-ky-dKy"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-AX-Vha" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-AX-Vha" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="296" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="O">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -113,7 +113,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vha-a9-VEw"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41T-mT-dev" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41T-mT-dev" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="333" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="P">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -145,7 +145,7 @@
                                         <constraint firstAttribute="height" constant="45" id="oQq-7x-mct"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-P7-oa0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-P7-oa0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="21.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="A">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -154,7 +154,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="XTL-UX-hxO"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-Kt-Mm7" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-Kt-Mm7" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="57.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="S">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -163,7 +163,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="8jT-FJ-gpf"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-AW-tN3" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-AW-tN3" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="94" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="D">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -172,7 +172,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Jh-k8-EaE"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-tQ-jRl" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-tQ-jRl" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="130" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="F">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -181,7 +181,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="wBb-oC-MYo"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waU-tK-9ZZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waU-tK-9ZZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="166.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="G">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -190,7 +190,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Of-Sr-koP"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9V-dL-dsO" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9V-dL-dsO" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="203" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="H">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -199,7 +199,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4cs-e5-gxJ"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-0k-xtV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-0k-xtV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="239" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="J">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -208,7 +208,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="dO2-W2-hl6"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-wQ-N16" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-wQ-N16" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="275.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="K">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -217,7 +217,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="81X-of-wWh"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-2b-ZhD" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-2b-ZhD" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="311.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="L">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -239,7 +239,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
                             <rect key="frame" x="0.0" y="145.5" width="363" height="45"/>
                             <subviews>
-                                <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Hrp-0d-pKz"/>
@@ -256,7 +256,7 @@
                                         <constraint firstAttribute="width" id="4Bq-oE-tRO"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-oa-zvd" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-oa-zvd" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="57.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="Z">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -265,7 +265,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="FVz-3T-vCJ"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-EW-Nws" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-EW-Nws" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="94" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="X">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -274,7 +274,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0yL-l4-TbV"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="130" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="C">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -283,7 +283,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ixf-VW-WTg"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-aw-jXe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-aw-jXe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="166.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="V">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -292,7 +292,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vpa-jR-dGB"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-r9-PbP" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-r9-PbP" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="203" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="B">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -301,7 +301,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ixl-Vb-g5n"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sr-1d-RK5" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sr-1d-RK5" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="239" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="N">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -310,7 +310,7 @@
                                         <action selector="letterKeyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Dk-A1-KjK"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-22-wnK" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-22-wnK" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="275.5" y="0.0" width="30" height="45"/>
                                     <state key="normal" title="M">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -325,7 +325,7 @@
                                         <constraint firstAttribute="width" id="Icv-ko-2W6"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" tag="127" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RD-XH-wdi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="127" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RD-XH-wdi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="318" y="0.0" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="3pJ-wj-czK"/>
@@ -342,7 +342,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-nE-KMS" userLabel="Forth Row Stack View">
                             <rect key="frame" x="0.0" y="200" width="363" height="45"/>
                             <subviews>
-                                <button opaque="NO" tag="128" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-p7-mXV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="128" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-p7-mXV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="FEh-JX-hAk"/>
@@ -352,7 +352,7 @@
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" tag="129" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwE-FE-mtb" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="129" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwE-FE-mtb" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="51" y="0.0" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="dEw-fx-RVN"/>
@@ -361,7 +361,7 @@
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" tag="130" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-I5-mXE" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="130" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-I5-mXE" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="102" y="0.0" width="155" height="45"/>
                                     <state key="normal" title="space">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -370,7 +370,7 @@
                                         <action selector="spacePressed" destination="iN0-l3-epB" eventType="touchUpInside" id="OmL-Re-NC6"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-TP-K6i" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
+                                <button opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-TP-K6i" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="263" y="0.0" width="100" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="au2-rB-9Uw"/>

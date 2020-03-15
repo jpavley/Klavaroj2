@@ -17,9 +17,6 @@ protocol EsperantroKeyboardViewDelegate: class {
 
 class EsperantoKeyboardView: UIView {
   
-  // top text label
-  @IBOutlet var previewLabel: UILabel!
-  
   // popup keys for accented letters
   @IBOutlet var LetterCButton: UIButton!
   @IBOutlet var LetterGButton: UIButton!
@@ -209,8 +206,6 @@ class EsperantoKeyboardView: UIView {
   
   func setColorScheme(_ colorScheme: EsperantoColorScheme) {
     let colorScheme = EsperantoColors(colorScheme: colorScheme)
-    previewLabel.backgroundColor = colorScheme.previewBackgroundColor
-    previewLabel.textColor = colorScheme.previewTextColor
     backgroundColor = colorScheme.backgroundColor
     
     // TODO: only modify cases of alphabetical keys

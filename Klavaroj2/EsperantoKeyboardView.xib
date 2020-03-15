@@ -10,23 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EsperantoKeyboardView" customModule="Klavaroj2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-BV-hRo" userLabel="Main Stack View">
-                    <rect key="frame" x="6" y="6" width="363" height="245"/>
+                    <rect key="frame" x="6" y="6" width="363" height="207"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-0b-XiH">
-                            <rect key="frame" x="0.0" y="0.0" width="363" height="26"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="26" id="FsU-QN-87C"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-J6-ZMQ" userLabel="First Row Stack View">
-                            <rect key="frame" x="0.0" y="36" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="45"/>
                             <subviews>
                                 <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-vw-lPM" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="45"/>
@@ -136,7 +127,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-7q-Tma" userLabel="Second Row Stack View">
-                            <rect key="frame" x="0.0" y="90.5" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="54" width="363" height="45"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFT-7f-hhO">
                                     <rect key="frame" x="0.0" y="0.0" width="15" height="45"/>
@@ -237,7 +228,7 @@
                             <viewLayoutGuide key="safeArea" id="Ieu-lv-weB"/>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
-                            <rect key="frame" x="0.0" y="145.5" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="108" width="363" height="45"/>
                             <subviews>
                                 <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -340,7 +331,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-nE-KMS" userLabel="Forth Row Stack View">
-                            <rect key="frame" x="0.0" y="200" width="363" height="45"/>
+                            <rect key="frame" x="0.0" y="162" width="363" height="45"/>
                             <subviews>
                                 <button opaque="NO" tag="128" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-p7-mXV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -426,7 +417,6 @@
                 <outlet property="nextButtonWidthConstraint" destination="dEw-fx-RVN" id="zqQ-fw-F3w"/>
                 <outlet property="nextKeyboardButton" destination="OwE-FE-mtb" id="vQu-uJ-e1a"/>
                 <outlet property="numberButton" destination="UfN-p7-mXV" id="lqe-Bj-9Kb"/>
-                <outlet property="previewLabel" destination="XO7-0b-XiH" id="C5e-5c-WbY"/>
                 <outlet property="returnButton" destination="Zpm-TP-K6i" id="hhX-FA-5he"/>
                 <outlet property="rightOfMSpaceConstraint" destination="Icv-ko-2W6" id="rg2-8a-mYj"/>
                 <outlet property="shiftButton" destination="nDX-0g-ITi" id="sy4-Xf-sxN"/>

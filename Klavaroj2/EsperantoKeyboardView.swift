@@ -48,7 +48,7 @@ class EsperantoKeyboardView: UIView {
   var isShifted = false
   
   // TODO: Geet input from physical keyboard
-    
+  
   @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
     isShifted = !isShifted
     updateShiftState()
@@ -59,9 +59,9 @@ class EsperantoKeyboardView: UIView {
     /// Return if label or letter is not available
     guard
       let label = sender.titleLabel,
-      let letter = label.text?.lowercased()
+      let letter = label.text
       else { return }
-        
+    
     /// Dictionary of specical characters and their replacements
     var subsitutes: [String: String] = [
       "c" : "ĉ",
@@ -69,18 +69,24 @@ class EsperantoKeyboardView: UIView {
       "h" : "ĥ",
       "j" : "ĵ",
       "s" : "ŝ",
-      "u" : "û"
+      "u" : "û",
+      "C" : "Ĉ",
+      "G" : "Ĝ",
+      "H" : "Ĥ",
+      "J" : "Ĵ",
+      "S" : "Ŝ",
+      "U" : "Û"
     ]
     
     /// The trigger character is used to signal a potential subsitution based on the character before the trigger
     let trigger = "x"
-
+    
     /// Returns true if letter is member of the special set (cghjsu)
     /// - Parameter letter: The character to be tested
     func isSpecial(_ letter: String) -> Bool {
       return subsitutes.keys.contains(letter)
     }
-        
+    
     /// Replaces a special sequence, like cx, with an accented character, like ĉ
     /// - Parameter letter: The special character to be subsituted
     /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
@@ -88,25 +94,10 @@ class EsperantoKeyboardView: UIView {
       localTextCache = [String]()
       delegate?.deleteCharacterBeforeCursor()
       delegate?.deleteCharacterBeforeCursor()
-      
-      // TODO: Don't use isShifted to detect case of subsitute letter.
-      //       Instead, if the special character shifted then the
-      //       subsitute should be shifted.
-      
-      let casedLetter = determinCaseForSubsitute() ? subsitutes[letter]!.uppercased() : subsitutes[letter]!.lowercased()
             
-      // END of TODO
-      
-      delegate?.insertCharacter(casedLetter)
+      delegate?.insertCharacter(subsitutes[letter]!)
     }
-    
-    func determinCaseForSubsitute() -> Bool {
-      print(delegate?.text()!) // doesn't work
-      // TODO: need to detmine case of subsitute when specical character is typed...
-      //       What case was it typed in/
-      return false
-    }
-    
+        
     /// Inserts letter into `localTextCache` and `EsperantroKeyboardViewDelegate`
     /// - Parameter letter: The character represented by the keypress
     func processKeyPress(_ letter: String) {
@@ -132,7 +123,7 @@ class EsperantoKeyboardView: UIView {
         updateShiftState()
       }
     }
-        
+    
     processKeyPress(letter)
   }
   
@@ -234,7 +225,7 @@ class EsperantoKeyboardView: UIView {
         }
         
         if button == nextKeyboardButton || button == deleteButton
-        || button == numberButton || button == returnButton {
+          || button == numberButton || button == returnButton {
           button.defaultBackgroundColor = colorScheme.buttonHighlightColor
           button.highlightBackgroundColor = colorScheme.buttonBackgroundColor
         } else {
@@ -250,11 +241,11 @@ class EsperantoKeyboardView: UIView {
 extension EsperantoKeyboardView {
   
   // TODO: func letterKeyLongPress()
-
+  
   @IBAction func deletePressed() {
     delegate?.deleteCharacterBeforeCursor()
   }
-
+  
   @IBAction func spacePressed() {
     delegate?.insertCharacter(" ")
   }

@@ -45,6 +45,9 @@ class EsperantoKeyboardView: UIView {
   weak var delegate: EsperantroKeyboardViewDelegate?
   var localTextCache = [String]()
   
+  // TODO: Handle upper case
+  // TODO: Get input from the physical keyboard
+  
   @IBAction func letterKeyTapped(_ sender: EsperantoKeyButton) {
     
     /// Return if label or letter is not available

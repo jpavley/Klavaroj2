@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol EsperantroKeyboardViewDelegate: class {
   func insertCharacter(_ newCharacter: String)
@@ -44,7 +45,13 @@ class EsperantoKeyboardView: UIView {
   var localTextCache = [String]()
   var isShifted = false
   
-  // TODO: Geet input from physical keyboard
+  // Sounds
+  let letterPressedSound: SystemSoundID = 1105
+  let deletePressedSound: SystemSoundID = 1103
+  let subsitutionSound: SystemSoundID = 1104
+
+  
+  // TODO: Get input from physical keyboard
   
   @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
     isShifted = !isShifted
@@ -58,7 +65,7 @@ class EsperantoKeyboardView: UIView {
       let label = sender.titleLabel,
       let letter = label.text
       else { return }
-    
+            
     /// Dictionary of specical characters and their replacements
     var subsitutes: [String: String] = [
       "c" : "ĉ",
@@ -88,6 +95,15 @@ class EsperantoKeyboardView: UIView {
     /// - Parameter letter: The special character to be subsituted
     /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
     func subsitute(_ letter: String) {
+      
+      /// UIInputViewAudioFeedback
+      UIDevice.current.playInputClick()
+      AudioServicesPlaySystemSound(subsitutionSound)
+
+      /// UIFeedbackGenerator
+      let generator = UIImpactFeedbackGenerator(style: .heavy)
+      generator.impactOccurred()
+      
       localTextCache = [String]()
       delegate?.deleteCharacterBeforeCursor()
       delegate?.deleteCharacterBeforeCursor()
@@ -98,6 +114,7 @@ class EsperantoKeyboardView: UIView {
     /// Inserts letter into `localTextCache` and `EsperantroKeyboardViewDelegate`
     /// - Parameter letter: The character represented by the keypress
     func processKeyPress(_ letter: String) {
+            
       localTextCache.append(letter)
       //print("insertion", localTextCache)
       let casedLetter = isShifted ? letter.uppercased() : letter.lowercased()
@@ -112,7 +129,23 @@ class EsperantoKeyboardView: UIView {
         /// the character before the `trigger` is a special character!
         if localTextCache.count >= 2 && isSpecial(localTextCache[secondToLastIndex]) {
           subsitute(localTextCache[secondToLastIndex])
+        } else {
+          /// UIInputViewAudioFeedback
+          UIDevice.current.playInputClick()
+          AudioServicesPlaySystemSound(letterPressedSound)
+          
+          /// UIFeedbackGenerator
+          let generator = UIImpactFeedbackGenerator(style: .light)
+          generator.impactOccurred()
         }
+      } else {
+        /// UIInputViewAudioFeedback
+        UIDevice.current.playInputClick()
+        AudioServicesPlaySystemSound(letterPressedSound)
+        
+        /// UIFeedbackGenerator
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
       }
       
       if isShifted {
@@ -238,12 +271,37 @@ extension EsperantoKeyboardView {
   // TODO: func letterKeyLongPress()
   
   @IBAction func deletePressed() {
+    /// UIInputViewAudioFeedback
+    UIDevice.current.playInputClick()
+    AudioServicesPlaySystemSound(deletePressedSound)
+
+    
+    /// UIFeedbackGenerator
+    let generator = UIImpactFeedbackGenerator(style: .medium)
+    generator.impactOccurred()
+
     localTextCache = [String]()
     delegate?.deleteCharacterBeforeCursor()
   }
   
   @IBAction func spacePressed() {
+    /// UIInputViewAudioFeedback
+    UIDevice.current.playInputClick()
+    AudioServicesPlaySystemSound(letterPressedSound)
+    
+    /// UIFeedbackGenerator
+    let generator = UIImpactFeedbackGenerator(style: .light)
+    generator.impactOccurred()
+
     localTextCache = [String]()
     delegate?.insertCharacter(" ")
+  }
+}
+
+// MARK: - UIInputViewAudioFeedback
+
+extension EsperantoKeyboardView: UIInputViewAudioFeedback {
+  public var enableInputClicksWhenVisible: Bool {
+    return true
   }
 }

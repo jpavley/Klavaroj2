@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+// MARK:- EsperantroKeyboardViewDelegate Protocol
+
 protocol EsperantroKeyboardViewDelegate: class {
   func insertCharacter(_ newCharacter: String)
   func deleteCharacterBeforeCursor()
@@ -16,7 +18,11 @@ protocol EsperantroKeyboardViewDelegate: class {
   func text() -> String?
 }
 
+// MARK:- EsperantoKeyboardView Class
+
 class EsperantoKeyboardView: UIView {
+  
+  // MARK:- IBOutlets
   
   // popup keys for accented letters
   @IBOutlet var LetterCButton: UIButton!
@@ -41,6 +47,8 @@ class EsperantoKeyboardView: UIView {
   @IBOutlet var leftOfZSpaceConstraint: NSLayoutConstraint!
   @IBOutlet var rightOfMSpaceConstraint: NSLayoutConstraint!
   
+  // MARK:- Class Properities
+  
   weak var delegate: EsperantroKeyboardViewDelegate?
   var localTextCache = [String]()
   var isShifted = false
@@ -49,6 +57,8 @@ class EsperantoKeyboardView: UIView {
   let letterPressedSound: SystemSoundID = 1105
   let deletePressedSound: SystemSoundID = 1103
   let subsitutionSound: SystemSoundID = 1104
+  
+  // MARK:- IBActions
 
   
   // TODO: Get input from physical keyboard
@@ -157,6 +167,8 @@ class EsperantoKeyboardView: UIView {
     processKeyPress(letter)
   }
   
+  // MARK:- Initialization
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setColorScheme(.dark)
@@ -174,6 +186,8 @@ class EsperantoKeyboardView: UIView {
     adjustKeyboard(true)
     updateKeyCaps()
   }
+  
+  // MARK:- Class Methods
   
   func updateKeyCaps() {
     for tag in 100...131 {
@@ -265,7 +279,7 @@ class EsperantoKeyboardView: UIView {
   }
 }
 
-// MARK: - Actions
+// MARK: - IBActions
 extension EsperantoKeyboardView {
   
   // TODO: func letterKeyLongPress()
@@ -298,7 +312,7 @@ extension EsperantoKeyboardView {
   }
 }
 
-// MARK: - UIInputViewAudioFeedback
+// MARK: - UIInputViewAudioFeedback Protocol
 
 extension EsperantoKeyboardView: UIInputViewAudioFeedback {
   public var enableInputClicksWhenVisible: Bool {

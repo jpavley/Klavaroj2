@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-// MARK:- EsperantroKeyboardViewDelegate Protocol
+// MARK:- EsperantroKeyboardViewDelegate
 
 protocol EsperantroKeyboardViewDelegate: class {
   func insertCharacter(_ newCharacter: String)
@@ -18,7 +18,7 @@ protocol EsperantroKeyboardViewDelegate: class {
   func text() -> String?
 }
 
-// MARK:- EsperantoKeyboardView Class
+// MARK:- EsperantoKeyboardView
 
 class EsperantoKeyboardView: UIView {
   
@@ -53,10 +53,13 @@ class EsperantoKeyboardView: UIView {
   var localTextCache = [String]()
   var isShifted = false
   
-  // Sounds
-  let letterPressedSound: SystemSoundID = 1105
-  let deletePressedSound: SystemSoundID = 1103
-  let subsitutionSound: SystemSoundID = 1104
+  // MARK:- Audio Feedback
+  
+  enum AudioFeedbackMode {
+    case AVFoundation, UIDevice
+  }
+  
+  var audioFeedbackMode: AudioFeedbackMode = .AVFoundation
     
   // MARK:- Initialization
   
@@ -83,8 +86,6 @@ class EsperantoKeyboardView: UIView {
 // MARK: - IBActions
 extension EsperantoKeyboardView {
   
-  // MARK:- IBActions
-
   // TODO: Get input from physical keyboard
   
   @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
@@ -129,15 +130,7 @@ extension EsperantoKeyboardView {
     /// - Parameter letter: The special character to be subsituted
     /// - NOTE: Don't pass the whole sequence (cx), just the special charater (c)
     func subsitute(_ letter: String) {
-      
-      /// UIInputViewAudioFeedback
-      UIDevice.current.playInputClick()
-      AudioServicesPlaySystemSound(subsitutionSound)
-
-      /// UIFeedbackGenerator
-      let generator = UIImpactFeedbackGenerator(style: .heavy)
-      generator.impactOccurred()
-      
+      playFeedback(style: .heavy)
       localTextCache = [String]()
       delegate?.deleteCharacterBeforeCursor()
       delegate?.deleteCharacterBeforeCursor()
@@ -148,7 +141,6 @@ extension EsperantoKeyboardView {
     /// Inserts letter into `localTextCache` and `EsperantroKeyboardViewDelegate`
     /// - Parameter letter: The character represented by the keypress
     func processKeyPress(_ letter: String) {
-            
       localTextCache.append(letter)
       //print("insertion", localTextCache)
       let casedLetter = isShifted ? letter.uppercased() : letter.lowercased()
@@ -164,22 +156,10 @@ extension EsperantoKeyboardView {
         if localTextCache.count >= 2 && isSpecial(localTextCache[secondToLastIndex]) {
           subsitute(localTextCache[secondToLastIndex])
         } else {
-          /// UIInputViewAudioFeedback
-          UIDevice.current.playInputClick()
-          AudioServicesPlaySystemSound(letterPressedSound)
-          
-          /// UIFeedbackGenerator
-          let generator = UIImpactFeedbackGenerator(style: .light)
-          generator.impactOccurred()
+          playFeedback(style: .light)
         }
       } else {
-        /// UIInputViewAudioFeedback
-        UIDevice.current.playInputClick()
-        AudioServicesPlaySystemSound(letterPressedSound)
-        
-        /// UIFeedbackGenerator
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+        playFeedback(style: .light)
       }
       
       if isShifted {
@@ -196,34 +176,21 @@ extension EsperantoKeyboardView {
   @IBAction func deletePressed() {
     // TODO: Deleting a diacritics first deletes the trigger (x) character and transforms
     //       it back into its key character (ĉ<del> becomes c)
-    /// UIInputViewAudioFeedback
-    UIDevice.current.playInputClick()
-    AudioServicesPlaySystemSound(deletePressedSound)
-
     
-    /// UIFeedbackGenerator
-    let generator = UIImpactFeedbackGenerator(style: .medium)
-    generator.impactOccurred()
-
+    playFeedback(style: .medium)
     localTextCache = [String]()
     delegate?.deleteCharacterBeforeCursor()
   }
   
   @IBAction func spacePressed() {
-    /// UIInputViewAudioFeedback
-    UIDevice.current.playInputClick()
-    AudioServicesPlaySystemSound(letterPressedSound)
-    
-    /// UIFeedbackGenerator
-    let generator = UIImpactFeedbackGenerator(style: .light)
-    generator.impactOccurred()
+    playFeedback(style: .light)
 
     localTextCache = [String]()
     delegate?.insertCharacter(" ")
   }
 }
 
-// MARK: - UIInputViewAudioFeedback Protocol
+// MARK: - UIInputViewAudioFeedback
 
 extension EsperantoKeyboardView: UIInputViewAudioFeedback {
   public var enableInputClicksWhenVisible: Bool {
@@ -234,6 +201,45 @@ extension EsperantoKeyboardView: UIInputViewAudioFeedback {
 // MARK:- Class Methods
 
 extension EsperantoKeyboardView {
+  
+  // MARK:- Feedback
+  
+  func playFeedback(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+    
+    var feedbackSound: SystemSoundID = 0
+    let letterPressedSound: SystemSoundID = 1105
+    let deletePressedSound: SystemSoundID = 1103
+    let subsitutionSound: SystemSoundID = 1104
+    
+    switch style {
+    case .light:
+      feedbackSound = letterPressedSound
+    case .medium:
+      feedbackSound = deletePressedSound
+    case .heavy:
+      feedbackSound = subsitutionSound
+    case .soft:
+      print("unused UIImpactFeedbackGenerator.FeedbackStyle")
+    case .rigid:
+      print("unused UIImpactFeedbackGenerator.FeedbackStyle")
+    @unknown default:
+      print("unused UIImpactFeedbackGenerator.FeedbackStyle")
+    }
+    
+    switch audioFeedbackMode {
+    case .AVFoundation:
+      AudioServicesPlaySystemSound(feedbackSound)
+    case .UIDevice:
+      /// UIInputViewAudioFeedback
+      UIDevice.current.playInputClick()
+    }
+
+    /// UIFeedbackGenerator
+    let generator = UIImpactFeedbackGenerator(style: style)
+    generator.impactOccurred()
+  }
+  
+  // MARK:- Keyboard
   
   func updateKeyCaps() {
     for tag in 100...131 {
@@ -297,6 +303,8 @@ extension EsperantoKeyboardView {
     }
   }
   
+  // MARK:- Colors
+  
   func setColorScheme(_ colorScheme: EsperantoColorScheme) {
     let colorScheme = EsperantoColors(colorScheme: colorScheme)
     backgroundColor = colorScheme.backgroundColor
@@ -323,5 +331,4 @@ extension EsperantoKeyboardView {
       }
     }
   }
-
 }

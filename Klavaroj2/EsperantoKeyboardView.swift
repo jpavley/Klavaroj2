@@ -108,13 +108,13 @@ extension EsperantoKeyboardView {
       "h" : "ĥ",
       "j" : "ĵ",
       "s" : "ŝ",
-      "u" : "û",
+      "u" : "ŭ",
       "C" : "Ĉ",
       "G" : "Ĝ",
       "H" : "Ĥ",
       "J" : "Ĵ",
       "S" : "Ŝ",
-      "U" : "Û"
+      "U" : "Ŭ"
     ]
     
     /// The trigger character is used to signal a potential subsitution based on the character before the trigger

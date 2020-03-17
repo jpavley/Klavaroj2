@@ -57,10 +57,34 @@ class EsperantoKeyboardView: UIView {
   let letterPressedSound: SystemSoundID = 1105
   let deletePressedSound: SystemSoundID = 1103
   let subsitutionSound: SystemSoundID = 1104
+    
+  // MARK:- Initialization
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setColorScheme(.dark)
+    adjustKeyboard(false)
+    updateKeyCaps()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setColorScheme(.dark)
+    adjustKeyboard(true)
+    updateKeyCaps()
+  }
+  
+}
+
+// MARK: - IBActions
+extension EsperantoKeyboardView {
   
   // MARK:- IBActions
 
-  
   // TODO: Get input from physical keyboard
   
   @IBAction func shiftKeyPressed(_ sender: EsperantoKeyButton) {
@@ -167,34 +191,11 @@ class EsperantoKeyboardView: UIView {
     processKeyPress(letter)
   }
   
-  // MARK:- Initialization
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    setColorScheme(.dark)
-    adjustKeyboard(false)
-    updateKeyCaps()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    setColorScheme(.dark)
-    adjustKeyboard(true)
-    updateKeyCaps()
-  }
-  
-}
-
-// MARK: - IBActions
-extension EsperantoKeyboardView {
-  
   // TODO: func letterKeyLongPress()
   
   @IBAction func deletePressed() {
+    // TODO: Deleting a diacritics first deletes the trigger (x) character and transforms
+    //       it back into its key character (ĉ<del> becomes c)
     /// UIInputViewAudioFeedback
     UIDevice.current.playInputClick()
     AudioServicesPlaySystemSound(deletePressedSound)

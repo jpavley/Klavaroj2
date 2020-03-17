@@ -187,7 +187,52 @@ class EsperantoKeyboardView: UIView {
     updateKeyCaps()
   }
   
-  // MARK:- Class Methods
+}
+
+// MARK: - IBActions
+extension EsperantoKeyboardView {
+  
+  // TODO: func letterKeyLongPress()
+  
+  @IBAction func deletePressed() {
+    /// UIInputViewAudioFeedback
+    UIDevice.current.playInputClick()
+    AudioServicesPlaySystemSound(deletePressedSound)
+
+    
+    /// UIFeedbackGenerator
+    let generator = UIImpactFeedbackGenerator(style: .medium)
+    generator.impactOccurred()
+
+    localTextCache = [String]()
+    delegate?.deleteCharacterBeforeCursor()
+  }
+  
+  @IBAction func spacePressed() {
+    /// UIInputViewAudioFeedback
+    UIDevice.current.playInputClick()
+    AudioServicesPlaySystemSound(letterPressedSound)
+    
+    /// UIFeedbackGenerator
+    let generator = UIImpactFeedbackGenerator(style: .light)
+    generator.impactOccurred()
+
+    localTextCache = [String]()
+    delegate?.insertCharacter(" ")
+  }
+}
+
+// MARK: - UIInputViewAudioFeedback Protocol
+
+extension EsperantoKeyboardView: UIInputViewAudioFeedback {
+  public var enableInputClicksWhenVisible: Bool {
+    return true
+  }
+}
+
+// MARK:- Class Methods
+
+extension EsperantoKeyboardView {
   
   func updateKeyCaps() {
     for tag in 100...131 {
@@ -277,45 +322,5 @@ class EsperantoKeyboardView: UIView {
       }
     }
   }
-}
 
-// MARK: - IBActions
-extension EsperantoKeyboardView {
-  
-  // TODO: func letterKeyLongPress()
-  
-  @IBAction func deletePressed() {
-    /// UIInputViewAudioFeedback
-    UIDevice.current.playInputClick()
-    AudioServicesPlaySystemSound(deletePressedSound)
-
-    
-    /// UIFeedbackGenerator
-    let generator = UIImpactFeedbackGenerator(style: .medium)
-    generator.impactOccurred()
-
-    localTextCache = [String]()
-    delegate?.deleteCharacterBeforeCursor()
-  }
-  
-  @IBAction func spacePressed() {
-    /// UIInputViewAudioFeedback
-    UIDevice.current.playInputClick()
-    AudioServicesPlaySystemSound(letterPressedSound)
-    
-    /// UIFeedbackGenerator
-    let generator = UIImpactFeedbackGenerator(style: .light)
-    generator.impactOccurred()
-
-    localTextCache = [String]()
-    delegate?.insertCharacter(" ")
-  }
-}
-
-// MARK: - UIInputViewAudioFeedback Protocol
-
-extension EsperantoKeyboardView: UIInputViewAudioFeedback {
-  public var enableInputClicksWhenVisible: Bool {
-    return true
-  }
 }

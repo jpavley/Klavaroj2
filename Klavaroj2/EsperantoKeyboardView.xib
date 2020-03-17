@@ -13,17 +13,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-BV-hRo" userLabel="Main Stack View">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-BV-hRo" userLabel="Main Stack View">
                     <rect key="frame" x="6" y="6" width="363" height="207"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-J6-ZMQ" userLabel="First Row Stack View">
-                            <rect key="frame" x="0.0" y="0.0" width="363" height="45"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-J6-ZMQ" userLabel="First Row Stack View">
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="52"/>
                             <subviews>
                                 <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-vw-lPM" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="36.5" height="52"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="bzr-Tb-KaD"/>
-                                        <constraint firstAttribute="width" constant="30" id="efM-1g-mrH"/>
+                                        <constraint firstAttribute="height" priority="250" constant="45" id="bzr-Tb-KaD"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="efM-1g-mrH"/>
                                     </constraints>
                                     <state key="normal" title="Q">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -33,7 +33,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-eZ-6SZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="37" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="36.5" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="W">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -42,7 +42,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-Ls-ly0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="74" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="72.5" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="E">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -51,7 +51,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-vo-Bpe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="111" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="109" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="R">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -60,7 +60,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGj-uw-jk2" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="148" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="145" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="T">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -69,7 +69,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBH-ng-o1n" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="185" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="181.5" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="Y">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -78,7 +78,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCB-d6-ml1" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="222" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="218" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="U">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -87,7 +87,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-AP-u1L" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="259" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="254" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="I">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -96,7 +96,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-AX-Vha" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="296" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="290.5" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="O">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -105,7 +105,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41T-mT-dev" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="333" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="326.5" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="P">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -126,18 +126,18 @@
                                 <constraint firstItem="b7R-vo-Bpe" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="y28-6E-XjB"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-7q-Tma" userLabel="Second Row Stack View">
-                            <rect key="frame" x="0.0" y="54" width="363" height="45"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-7q-Tma" userLabel="Second Row Stack View">
+                            <rect key="frame" x="0.0" y="52" width="363" height="51.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFT-7f-hhO">
-                                    <rect key="frame" x="0.0" y="0.0" width="15" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="15" height="51.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="15" id="Lbd-6K-LLj"/>
-                                        <constraint firstAttribute="height" constant="45" id="oQq-7x-mct"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="oQq-7x-mct"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-P7-oa0" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="21.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="15" y="0.0" width="42.5" height="51.5"/>
                                     <state key="normal" title="A">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -146,7 +146,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-Kt-Mm7" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="57.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="57.5" y="0.0" width="36.5" height="51.5"/>
                                     <state key="normal" title="S">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -155,7 +155,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-AW-tN3" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="94" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="94" y="0.0" width="36" height="51.5"/>
                                     <state key="normal" title="D">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -164,7 +164,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-tQ-jRl" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="130" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="130" y="0.0" width="36.5" height="51.5"/>
                                     <state key="normal" title="F">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -173,7 +173,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waU-tK-9ZZ" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="166.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="166.5" y="0.0" width="36.5" height="51.5"/>
                                     <state key="normal" title="G">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -182,7 +182,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9V-dL-dsO" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="203" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="203" y="0.0" width="36" height="51.5"/>
                                     <state key="normal" title="H">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -191,7 +191,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-0k-xtV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="239" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="239" y="0.0" width="36.5" height="51.5"/>
                                     <state key="normal" title="J">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -200,7 +200,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-wQ-N16" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="275.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="275.5" y="0.0" width="36" height="51.5"/>
                                     <state key="normal" title="K">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -209,7 +209,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-2b-ZhD" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="311.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="311.5" y="0.0" width="36.5" height="51.5"/>
                                     <state key="normal" title="L">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -218,7 +218,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUe-mr-q2c">
-                                    <rect key="frame" x="348" y="0.0" width="15" height="45"/>
+                                    <rect key="frame" x="348" y="0.0" width="15" height="51.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="15" id="in9-hE-efC"/>
                                     </constraints>
@@ -227,13 +227,13 @@
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="Ieu-lv-weB"/>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
-                            <rect key="frame" x="0.0" y="108" width="363" height="45"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-Vp-tHz" userLabel="Third Row Stack View">
+                            <rect key="frame" x="0.0" y="103.5" width="363" height="52"/>
                             <subviews>
                                 <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-0g-ITi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="52"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="Hrp-0d-pKz"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Hrp-0d-pKz"/>
                                         <constraint firstAttribute="width" constant="45" id="dbT-Zh-blg"/>
                                     </constraints>
                                     <state key="normal" title="sh"/>
@@ -242,13 +242,13 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ML-lk-McI">
-                                    <rect key="frame" x="51.5" y="0.0" width="0.0" height="45"/>
+                                    <rect key="frame" x="45" y="0.0" width="0.0" height="52"/>
                                     <constraints>
                                         <constraint firstAttribute="width" id="4Bq-oE-tRO"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-oa-zvd" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="57.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="45" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="Z">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -257,7 +257,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-EW-Nws" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="94" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="81.5" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="X">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -266,7 +266,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-HA-rFo" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="130" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="117.5" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="C">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -275,7 +275,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-aw-jXe" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="166.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="154" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="V">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -284,7 +284,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-r9-PbP" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="203" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="190" y="0.0" width="55.5" height="52"/>
                                     <state key="normal" title="B">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -293,7 +293,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sr-1d-RK5" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="239" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="245.5" y="0.0" width="36" height="52"/>
                                     <state key="normal" title="N">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -302,7 +302,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-22-wnK" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="275.5" y="0.0" width="30" height="45"/>
+                                    <rect key="frame" x="281.5" y="0.0" width="36.5" height="52"/>
                                     <state key="normal" title="M">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -311,13 +311,13 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79p-iq-vOU">
-                                    <rect key="frame" x="311.5" y="0.0" width="0.0" height="45"/>
+                                    <rect key="frame" x="318" y="0.0" width="0.0" height="52"/>
                                     <constraints>
                                         <constraint firstAttribute="width" id="Icv-ko-2W6"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" tag="127" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RD-XH-wdi" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="318" y="0.0" width="45" height="45"/>
+                                    <rect key="frame" x="318" y="0.0" width="45" height="52"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="3pJ-wj-czK"/>
                                     </constraints>
@@ -330,21 +330,21 @@
                                 </button>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-nE-KMS" userLabel="Forth Row Stack View">
-                            <rect key="frame" x="0.0" y="162" width="363" height="45"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-nE-KMS" userLabel="Forth Row Stack View">
+                            <rect key="frame" x="0.0" y="155.5" width="363" height="51.5"/>
                             <subviews>
                                 <button opaque="NO" tag="128" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-p7-mXV" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="51.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="FEh-JX-hAk"/>
-                                        <constraint firstAttribute="height" constant="45" id="aIp-L2-OxM"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="aIp-L2-OxM"/>
                                     </constraints>
                                     <state key="normal" title="123">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" tag="129" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwE-FE-mtb" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="51" y="0.0" width="45" height="45"/>
+                                    <rect key="frame" x="45" y="0.0" width="45" height="51.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="dEw-fx-RVN"/>
                                     </constraints>
@@ -353,7 +353,7 @@
                                     </state>
                                 </button>
                                 <button opaque="NO" tag="130" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-I5-mXE" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="102" y="0.0" width="155" height="45"/>
+                                    <rect key="frame" x="90" y="0.0" width="173" height="51.5"/>
                                     <state key="normal" title="space">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
@@ -362,7 +362,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-TP-K6i" customClass="EsperantoKeyButton" customModule="Klavaroj2" customModuleProvider="target">
-                                    <rect key="frame" x="263" y="0.0" width="100" height="45"/>
+                                    <rect key="frame" x="263" y="0.0" width="100" height="51.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="au2-rB-9Uw"/>
                                     </constraints>
@@ -380,9 +380,9 @@
                         <constraint firstItem="SQi-wQ-N16" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="MXN-lY-gV3"/>
                         <constraint firstItem="waU-tK-9ZZ" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="Naf-GI-zgP"/>
                         <constraint firstItem="6IA-tQ-jRl" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="OpZ-LK-Gga"/>
-                        <constraint firstItem="bL5-P7-oa0" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="Qeb-NC-dPi"/>
+                        <constraint firstItem="bL5-P7-oa0" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" priority="250" id="Qeb-NC-dPi"/>
                         <constraint firstItem="6sr-1d-RK5" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="SH2-Eh-jo9"/>
-                        <constraint firstItem="nMn-r9-PbP" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="Y7U-rH-RrG"/>
+                        <constraint firstItem="nMn-r9-PbP" firstAttribute="width" relation="greaterThanOrEqual" secondItem="HHe-vw-lPM" secondAttribute="width" id="Y7U-rH-RrG"/>
                         <constraint firstItem="a9A-oa-zvd" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="j8X-0q-KQ9"/>
                         <constraint firstItem="4qI-aw-jXe" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="o9p-CN-Ms7"/>
                         <constraint firstItem="H9V-dL-dsO" firstAttribute="width" secondItem="HHe-vw-lPM" secondAttribute="width" id="pX5-PP-Pc0"/>

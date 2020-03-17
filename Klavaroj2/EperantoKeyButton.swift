@@ -28,15 +28,42 @@ class EsperantoKeyButton: UIButton {
     super.layoutSubviews()
     backgroundColor = isHighlighted ? highlightBackgroundColor : defaultBackgroundColor
   }
+  
+  override func draw(_ rect: CGRect) {
+    guard let context = UIGraphicsGetCurrentContext() else { return }
+    
+    let y1 = bounds.maxY - 4.0
+    let y2 = bounds.maxY - 6.0
+
+    let minX = bounds.minX + 3.0
+    let maxX = bounds.maxX - 3.0
+    
+    context.setStrokeColor(UIColor.systemGreen.cgColor)
+    context.setLineWidth(0.5)
+    context.move(to: CGPoint(x: minX, y: y1))
+    context.addLine(to: CGPoint(x: maxX, y: y1))
+    context.strokePath()
+    
+    context.setStrokeColor(UIColor.systemGreen.cgColor)
+    context.setLineWidth(0.5)
+    context.move(to: CGPoint(x: minX, y: y2))
+    context.addLine(to: CGPoint(x: maxX, y: y2))
+    context.strokePath()
+
+  }
 }
 
 // MARK: - Private Methods
 private extension EsperantoKeyButton {
   func commonInit() {
-    layer.cornerRadius = 5.0
-    layer.masksToBounds = false
-    layer.shadowOffset = CGSize(width: 0, height: 1.0)
-    layer.shadowRadius = 0.0
-    layer.shadowOpacity = 0.35
+//    print("\(titleLabel!.text!)\(self.frame)")
+//    frame = frame.insetBy(dx: 6, dy: 6)
+//    print("\(titleLabel!.text!)\(self.frame)")
+  
+//    layer.cornerRadius = 5.0
+//    layer.masksToBounds = false
+//    layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//    layer.shadowRadius = 0.0
+//    layer.shadowOpacity = 0.35
   }
 }

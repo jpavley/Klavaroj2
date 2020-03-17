@@ -65,7 +65,7 @@ class EsperantoKeyboardView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    setColorScheme(.dark)
+    setColorScheme(.light)
     adjustKeyboard(false)
     updateKeyCaps()
   }
@@ -76,7 +76,7 @@ class EsperantoKeyboardView: UIView {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    setColorScheme(.dark)
+    setColorScheme(.light)
     adjustKeyboard(true)
     updateKeyCaps()
   }

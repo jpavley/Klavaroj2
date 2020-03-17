@@ -279,8 +279,8 @@ extension EsperantoKeyboardView {
     // iPhone 11 Pro Max, 11 Pro, 11, 8 Plus
     if screenWidth >= 414 {
       keyButtonWidthConstraint.constant = 34
-      leftOfZSpaceConstraint.constant = 3
-      rightOfMSpaceConstraint.constant = 3
+//      leftOfZSpaceConstraint.constant = 3
+//      rightOfMSpaceConstraint.constant = 3
     }
     
   }

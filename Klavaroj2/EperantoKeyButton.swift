@@ -32,7 +32,7 @@ class EsperantoKeyButton: UIButton {
   override func draw(_ rect: CGRect) {
     guard let context = UIGraphicsGetCurrentContext() else { return }
     
-    let minY = bounds.minY + 4.0
+    // let minY = bounds.minY + 4.0
     let maxY = bounds.maxY - 4.0
 
     let minX = bounds.minX + 3.0
@@ -40,20 +40,21 @@ class EsperantoKeyButton: UIButton {
     
     context.setStrokeColor(UIColor.systemGreen.cgColor)
     context.setLineWidth(0.5)
+    
     context.move(to: CGPoint(x: minX, y: maxY))
     context.addLine(to: CGPoint(x: maxX, y: maxY))
-    context.addLine(to: CGPoint(x: maxX, y: minY))
-    context.addLine(to: CGPoint(x: minX, y: minY))
-    context.addLine(to: CGPoint(x: minX, y: maxY))
-
     context.strokePath()
     
     let y2 = bounds.maxY - 8.0
-    context.setStrokeColor(UIColor.systemGreen.cgColor)
-    context.setLineWidth(0.5)
     context.move(to: CGPoint(x: minX, y: y2))
     context.addLine(to: CGPoint(x: maxX, y: y2))
     context.strokePath()
+    
+    let y3 = bounds.minY + 8.0
+    context.move(to: CGPoint(x: minX, y: y3))
+    context.addLine(to: CGPoint(x: maxX, y: y3))
+    context.strokePath()
+
 
   }
 }
